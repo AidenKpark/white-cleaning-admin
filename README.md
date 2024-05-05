@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+# 관리자 대시보드 프로젝트
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+이 리포지토리는 다양한 애플리케이션 관리 및 모니터링을 위한 사용자 친화적인 관리자 대시보드를 만드는 Next.js 프로젝트를 포함하고 있습니다. 이 프로젝트는 팀 협업을 통해 효율적이고 기능이 풍부한 관리자 대시보드를 개발하는 것을 목표로 합니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 구조
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **프론트엔드:** 서버 사이드 렌더링과 라우팅을 효율적으로 처리하는 Next.js, 그리고 UI 컴포넌트를 위한 React를 기반으로 구축되어 있습니다.
+- **스타일링:** 일관된 스타일과 컴포넌트를 제공하는 Material-UI (MUI)를 사용합니다.
+- **API 통합:** 백엔드 API와 통신하여 데이터 조회 및 조작을 처리합니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 시작하기
 
-## Learn More
+프로젝트를 로컬에서 설정하는 방법은 다음과 같습니다:
 
-To learn more about Next.js, take a look at the following resources:
+1. **리포지토리 클론:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/AidenKpark/white-cleaning.git
+   cd admin-dashboard
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **의존성 설치:**
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **개발 서버 실행:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   npm run dev
+   ```
+
+4. **대시보드 접근:**
+
+   브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인할 수 있습니다.
+
+## 프로젝트 기능
+
+- **대시보드:** 주요 지표에 대한 개요를 제공하며, 차트와 테이블을 포함합니다.
+- **사용자 관리:** 사용자를 대상으로 CRUD 작업을 수행할 수 있습니다.
+- **설정:** 애플리케이션 설정을 구성할 수 있습니다.
+
+## 폴더 구조
+
+- **`pages`:** 애플리케이션의 모든 페이지를 포함합니다.
+- **`components`:** 폼, 버튼, 테이블 등을 포함하는 재사용 가능한 UI 컴포넌트.
+- **`styles`:** 커스텀 CSS와 테마 정의를 포함합니다.
+
+## 기여 방법
+
+1. **브랜치 생성:** 기능 또는 버그 수정을 위한 새로운 브랜치를 생성합니다:
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **풀 리퀘스트:** 작업이 완료되면 풀 리퀘스트를 생성하고 팀원에게 리뷰를 요청합니다.
+
+3. **코드 리뷰:** 서로의 코드를 검토하고 테스트한 후 머지합니다.
+
+## 향후 작업
+
+- **인증:** 인증 서비스를 통합합니다.
+- **고급 분석:** 추가적인 차트와 지표를 통해 더 깊은 통찰을 제공합니다.
+- **알림:** 중요한 이벤트에 대한 실시간 알림을 제공합니다.
+
+---

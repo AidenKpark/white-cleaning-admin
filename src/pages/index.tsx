@@ -17,10 +17,9 @@ import SalesDropdown from "@/components/SalesDropdown";
 
 const drawerWidth = 240;
 
-export default function PermanentDrawerLeft() {
+const PermanentDrawerLeft = () => {
     return (
         <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
             <AppBar
                 position="fixed"
                 sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}

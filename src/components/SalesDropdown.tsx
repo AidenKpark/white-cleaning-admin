@@ -1,28 +1,40 @@
 import * as React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import {
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Typography,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemText
+} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import DropdownList, {DropdownMenuItem} from "@/components/atoms/DropdownList/DropdownList";
 
-export default function SalesDropdown() {
+const SalesDropdown = () => {
+
+    const dropDownList: { DropdownTitle: string, DropdownMenuItem: DropdownMenuItem[] } = {
+        DropdownTitle: 'Sales',
+        DropdownMenuItem: [
+            {name: 'Daily', url: '/'},
+            {name: 'Weekly', url: '/'},
+            {name: 'Monthly', url: '/'},
+        ]
+    }
     return (
         <Accordion>
             <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ExpandMoreIcon/>}
                 aria-controls="Sales-content"
                 id="Sales-header"
             >
-                <Typography>Sales</Typography>
+                <Typography>{dropDownList.DropdownTitle}</Typography>
             </AccordionSummary>
-            <AccordionDetails>
-                <List>
-                    {['Daily', 'Weekly', 'Monthly'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
+            <AccordionDetails sx={{padding: 0}}>
+                <DropdownList MenuItemList={dropDownList.DropdownMenuItem}/>
             </AccordionDetails>
         </Accordion>
     );
 }
+export default SalesDropdown;

@@ -19,10 +19,10 @@ const drawerWidth = 240;
 
 const PermanentDrawerLeft = () => {
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{display: 'flex'}}>
             <AppBar
                 position="fixed"
-                sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+                sx={{width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px`}}
             >
                 <Toolbar>
                     <Typography variant="h6" noWrap component="div">
@@ -42,28 +42,28 @@ const PermanentDrawerLeft = () => {
                 variant="permanent"
                 anchor="left"
             >
-                <Toolbar />
-                <Divider />
+                <Toolbar/>
+                <Divider/>
                 <List>
                     {['Inbox', 'Sign In', 'Home'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
-                                <ListItemText primary={text} />
+                                <ListItemText primary={text}/>
                             </ListItemButton>
                         </ListItem>
                     ))}
                 </List>
-                <Divider />
-                <CourierDropdown />
-                <CustomerDropdown />
-                <ScheduleDropdown />
-                <SalesDropdown />
+                <Divider/>
+                <CourierDropdown/>
+                <CustomerDropdown/>
+                <ScheduleDropdown/>
+                <SalesDropdown/>
             </Drawer>
             <Box
                 component="main"
-                sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
+                sx={{flexGrow: 1, bgcolor: 'background.default', p: 3}}
             >
-                <Toolbar />
+                <Toolbar/>
                 <Typography paragraph>
                     첫번째 문단
                 </Typography>
@@ -74,3 +74,5 @@ const PermanentDrawerLeft = () => {
         </Box>
     );
 }
+
+export default PermanentDrawerLeft;

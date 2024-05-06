@@ -4,10 +4,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 const MyApp = ({Component, pageProps}: AppProps) => {
     return (
-        <>
+        <div>
             <CssBaseline/>
             <Component {...pageProps} />
-        </>
+        </div>
     );
 }
 

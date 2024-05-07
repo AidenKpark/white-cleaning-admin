@@ -6,10 +6,10 @@ import {
     Typography
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import AccordionMenu, {DropdownMenuItem} from "@/components/atoms/AccordionMenu/AccordionMenu";
+import AccordionMenu, {AccordionMenuItem} from "@/components/atoms/AccordionMenu/AccordionMenu";
 
 const CourierDropdown = () => {
-    const courierMenuItems: DropdownMenuItem[] = [
+    const courierMenuItems: AccordionMenuItem[] = [
         { name: 'Edit', url: 'courier/edit' },
         { name: 'List', url: 'courier/list' },
         { name: 'SignUp', url: 'courier/signup' },
@@ -25,7 +25,7 @@ const CourierDropdown = () => {
                 <Typography>Courier</Typography>
             </AccordionSummary>
             <AccordionDetails sx={{ padding: 0 }}>
-                <AccordionMenu MenuItemList={courierMenuItems} />
+                <AccordionMenu AccordionMenuItemList={courierMenuItems} />
             </AccordionDetails>
         </Accordion>
     );

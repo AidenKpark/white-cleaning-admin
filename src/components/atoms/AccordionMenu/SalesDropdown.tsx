@@ -4,19 +4,22 @@ import {
     AccordionSummary,
     AccordionDetails,
     Typography,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemText
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import AccordionMenu, {DropdownMenuItem} from "@/components/atoms/AccordionMenu/AccordionMenu";
+import AccordionMenu, {AccordionMenuItem} from "@/components/atoms/AccordionMenu/AccordionMenu";
+import AccordionTitle, {AccordionTitleProps} from "@/components/atoms/AccordionTitle/AccordionTitle";
+
+
+type AccordionMenuConfig = {
+    AccordionMenuTitle: string;
+    AccordionMenuItemList: AccordionMenuItem[];
+}
+
 
 const SalesDropdown = () => {
-
-    const dropDownList: { DropdownTitle: string, DropdownMenuItem: DropdownMenuItem[] } = {
-        DropdownTitle: 'Sales',
-        DropdownMenuItem: [
+    const accordionMenu: AccordionMenuConfig = {
+        AccordionMenuTitle: 'Sales',
+        AccordionMenuItemList: [
             {name: 'Daily', url: '/'},
             {name: 'Weekly', url: '/'},
             {name: 'Monthly', url: '/'},
@@ -24,16 +27,8 @@ const SalesDropdown = () => {
     }
     return (
         <Accordion>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon/>}
-                aria-controls="Sales-content"
-                id="Sales-header"
-            >
-                <Typography>{dropDownList.DropdownTitle}</Typography>
-            </AccordionSummary>
-            <AccordionDetails sx={{padding: 0}}>
-                <AccordionMenu MenuItemList={dropDownList.DropdownMenuItem}/>
-            </AccordionDetails>
+            <AccordionTitle AccordionTitle={accordionMenu.AccordionMenuTitle}/>
+            <AccordionMenu AccordionMenuItemList={accordionMenu.AccordionMenuItemList}/>
         </Accordion>
     );
 }

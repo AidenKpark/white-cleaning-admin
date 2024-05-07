@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+    AccordionDetails,
     List,
     ListItem,
     ListItemButton,
@@ -8,32 +9,34 @@ import {
 import {useRouter} from "next/router";
 
 
-export type DropdownMenuItem = {
+export type AccordionMenuItem = {
     name: string;
     url: string;
 }
-
-type DropdownListProps = {
-    MenuItemList: DropdownMenuItem[]
+type AccordionMenuProps = {
+    AccordionMenuItemList: AccordionMenuItem[]
 }
 
 
-const AccordionMenu = ({MenuItemList}: DropdownListProps) => {
+
+const AccordionMenu = ({AccordionMenuItemList}: AccordionMenuProps) => {
     const router = useRouter()
     const moveToUrl = (url: string) => router.push(`/${url}`)
     return (
-        <List>
-            {MenuItemList.map((value, index) => (
-                <ListItem key={value.name}
-                          onClick={() => moveToUrl(value.url)}
-                          sx={{borderBottom: 1, borderColor: 'divider'}}  // 테두리 추가
-                >
-                    <ListItemButton>
-                        <ListItemText primary={value.name}/>
-                    </ListItemButton>
-                </ListItem>
-            ))}
-        </List>
+        <AccordionDetails sx={{padding: 0}}>
+            <List>
+                {AccordionMenuItemList.map((value, index) => (
+                    <ListItem key={value.name}
+                              onClick={() => moveToUrl(value.url)}
+                              sx={{borderBottom: 1, borderColor: 'divider'}}  // 테두리 추가
+                    >
+                        <ListItemButton>
+                            <ListItemText primary={value.name}/>
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </AccordionDetails>
     );
 }
 

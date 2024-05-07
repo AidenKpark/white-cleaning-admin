@@ -1,4 +1,3 @@
-// src/components/AllDropdowns.tsx
 import * as React from 'react';
 import CourierDropdown from "@/components/atoms/AccordionMenu/CourierDropdown";
 import CustomerDropdown from "@/components/atoms/AccordionMenu/CustomerDropdown";
@@ -6,8 +5,7 @@ import ScheduleDropdown, {AccordionMenuConfig} from "@/components/atoms/Accordio
 import SalesDropdown from "@/components/atoms/AccordionMenu/SalesDropdown";
 
 
-const AllDropdowns = () => {
-
+const AccordionMenuGroup = () => {
 
     const menus: AccordionMenuConfig[] = [
         {
@@ -54,4 +52,4 @@ const AllDropdowns = () => {
     );
 }
 
-export default AllDropdowns;
+export default AccordionMenuGroup;

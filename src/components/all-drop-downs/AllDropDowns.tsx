@@ -1,9 +1,9 @@
 // src/components/AllDropdowns.tsx
 import * as React from 'react';
-import CourierDropdown from "@/components/atoms/DropdownList/CourierDropdown";
-import CustomerDropdown from "@/components/atoms/DropdownList/CustomerDropdown";
-import ScheduleDropdown from "@/components/atoms/DropdownList/ScheduleDropdown";
-import SalesDropdown from "@/components/atoms/DropdownList/SalesDropdown";
+import CourierDropdown from "@/components/atoms/AccordionMenu/CourierDropdown";
+import CustomerDropdown from "@/components/atoms/AccordionMenu/CustomerDropdown";
+import ScheduleDropdown from "@/components/atoms/AccordionMenu/ScheduleDropdown";
+import SalesDropdown from "@/components/atoms/AccordionMenu/SalesDropdown";
 
 
 const AllDropdowns = () => {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import DropdownList, {DropdownMenuItem} from "@/components/atoms/DropdownList/DropdownList";
+import AccordionMenu, {DropdownMenuItem} from "@/components/atoms/AccordionMenu/AccordionMenu";
 
 const CustomerDropdown = () => {
     const customerMenuItems: DropdownMenuItem[] = [
@@ -20,7 +20,7 @@ const CustomerDropdown = () => {
                 <Typography>Customer</Typography>
             </AccordionSummary>
             <AccordionDetails sx={{ padding: 0 }}>
-                <DropdownList MenuItemList={customerMenuItems} />
+                <AccordionMenu MenuItemList={customerMenuItems} />
             </AccordionDetails>
         </Accordion>
     );

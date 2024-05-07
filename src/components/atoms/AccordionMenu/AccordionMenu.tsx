@@ -1,22 +1,16 @@
 import * as React from 'react';
 import {
-    Accordion,
-    AccordionSummary,
-    AccordionDetails,
-    Typography,
     List,
     ListItem,
     ListItemButton,
     ListItemText
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {useRouter} from "next/router";
 
 
-
 export type DropdownMenuItem = {
-    name:string;
-    url:string;
+    name: string;
+    url: string;
 }
 
 type DropdownListProps = {
@@ -24,14 +18,14 @@ type DropdownListProps = {
 }
 
 
-const DropdownList = ({MenuItemList}:DropdownListProps) => {
+const AccordionMenu = ({MenuItemList}: DropdownListProps) => {
     const router = useRouter()
-    const moveToUrl = (url:string) => router.push(`/${url}`)
+    const moveToUrl = (url: string) => router.push(`/${url}`)
     return (
         <List>
             {MenuItemList.map((value, index) => (
                 <ListItem key={value.name}
-                          onClick={()=>moveToUrl(value.url)}
+                          onClick={() => moveToUrl(value.url)}
                           sx={{borderBottom: 1, borderColor: 'divider'}}  // 테두리 추가
                 >
                     <ListItemButton>
@@ -43,4 +37,4 @@ const DropdownList = ({MenuItemList}:DropdownListProps) => {
     );
 }
 
-export default DropdownList
+export default AccordionMenu

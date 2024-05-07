@@ -8,6 +8,8 @@ type AccordionMenuConfig = {
     AccordionMenuTitle: string;
     AccordionMenuItemList: AccordionMenuItem[];
 }
+
+
 const ScheduleDropdown = () => {
     const accordionMenu: AccordionMenuConfig = {
         AccordionMenuTitle: 'Schedule',

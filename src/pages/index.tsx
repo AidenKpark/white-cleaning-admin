@@ -1,15 +1,14 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import AllDropdowns from "@/components/all-drop-downs/AllDropDowns";
 import { StyledDrawer } from "@/styles/DrawerStyles";
-import {ListItemButton, Typography} from "@mui/material"; // 스타일된 드로어 임포트
+import {ListItemButton, Typography} from "@mui/material";
+import AccordionMenuGroup from "@/components/molecules/AccordionMenuGroup/AccordionMenuGroup"; // 스타일된 드로어 임포트
 
 const drawerWidth = 240;
 
@@ -43,7 +42,7 @@ const PermanentDrawerLeft = () => {
                     ))}
                 </List>
                 <Divider />
-                <AllDropdowns />
+                <AccordionMenuGroup />
             </StyledDrawer>
             <Box
                 component="main"

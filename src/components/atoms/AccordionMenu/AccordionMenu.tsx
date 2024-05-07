@@ -13,19 +13,18 @@ export type AccordionMenuItem = {
     name: string;
     url: string;
 }
-type AccordionMenuProps = {
-    AccordionMenuItemList: AccordionMenuItem[]
+export type AccordionMenuProps = {
+    AccordionMenuItems: AccordionMenuItem[];
 }
 
 
-
-const AccordionMenu = ({AccordionMenuItemList}: AccordionMenuProps) => {
+const AccordionMenu = ({AccordionMenuItems}: AccordionMenuProps) => {
     const router = useRouter()
     const moveToUrl = (url: string) => router.push(`/${url}`)
     return (
         <AccordionDetails sx={{padding: 0}}>
             <List>
-                {AccordionMenuItemList.map((value, index) => (
+                {AccordionMenuItems.map((value, index) => (
                     <ListItem key={value.name}
                               onClick={() => moveToUrl(value.url)}
                               sx={{borderBottom: 1, borderColor: 'divider'}}  // 테두리 추가

@@ -24,7 +24,7 @@ const AccordionMenu = ({AccordionMenuItems}: AccordionMenuProps) => {
     return (
         <AccordionDetails sx={{padding: 0}}>
             <List>
-                {AccordionMenuItems.map((value, index) => (
+                {AccordionMenuItems?.map((value, index) => (
                     <ListItem key={value.name}
                               onClick={() => moveToUrl(value.url)}
                               sx={{borderBottom: 1, borderColor: 'divider'}}  // 테두리 추가

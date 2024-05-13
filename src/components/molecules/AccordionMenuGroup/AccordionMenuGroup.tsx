@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {AccordionMenuPanelProps} from "@/components/atoms/AccordionMenu/SalesDropdown";
-import AccordionMenuPanel from "@/components/molecules/AccordionMenuPanel/AccordionMenuPanel";
-
+import AccordionMenuPanel, {
+    AccordionMenuPanelProps
+} from "@/components/molecules/AccordionMenuPanel/AccordionMenuPanel";
 
 const AccordionMenuGroup = () => {
 
@@ -14,7 +14,6 @@ const AccordionMenuGroup = () => {
                     {name: 'List', url: 'courier/list'},
                     {name: 'SignUp', url: 'courier/signup'},
                 ]
-
             }
         },
         {
@@ -35,7 +34,6 @@ const AccordionMenuGroup = () => {
                     {name: 'List', url: 'schedule/list'},
                     {name: 'Add', url: 'schedule/add'},
                 ]
-
             }
         },
         {
@@ -46,7 +44,6 @@ const AccordionMenuGroup = () => {
                     {name: 'Weekly', url: '/'},
                     {name: 'Monthly', url: '/'},
                 ]
-
             }
         }
     ]
@@ -54,7 +51,10 @@ const AccordionMenuGroup = () => {
     return (
         <>
             {
-                AccordionMenus.map(value => <AccordionMenuPanel {...value} />)
+                // 각 AccordionMenuPanel에 key prop을 추가
+                AccordionMenus.map(value => (
+                    <AccordionMenuPanel key={value.AccordionMenuTitle.AccordionTitle} {...value} />
+                ))
             }
         </>
     );

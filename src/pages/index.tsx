@@ -15,7 +15,7 @@ const PermanentDrawerLeft = () => {
             <AppBarCustom />
             <StyledDrawer drawerWidth={drawerWidth} variant="permanent" anchor="left">
                 <Divider />
-                <BasicList items={['Inbox', 'Sign In', 'Home']} />
+                <BasicList items={['Sign In', 'Home']} />
                 <Divider />
                 <AccordionMenuGroup />
             </StyledDrawer>

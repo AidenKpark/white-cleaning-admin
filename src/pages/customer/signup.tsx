@@ -14,7 +14,7 @@ const CourierListPage = () => {
             <AppBarCustom />
             <StyledDrawer drawerWidth={drawerWidth} variant="permanent" anchor="left">
                 <Divider />
-                <BasicList items={['Inbox', 'Sign In', 'Home']} />
+                <BasicList items={['Sign Out', 'Home']} />
                 <Divider />
                 <AccordionMenuGroup />
             </StyledDrawer>

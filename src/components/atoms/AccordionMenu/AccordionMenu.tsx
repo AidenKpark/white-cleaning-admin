@@ -23,7 +23,7 @@ const AccordionMenu = ({AccordionMenuItems}: AccordionMenuProps) => {
     const moveToUrl = (url: string) => router.push(`/${url}`)
     return (
         <AccordionDetails sx={{padding: 0}}>
-            <List>
+            <List sx={{padding: 0}}>
                 {AccordionMenuItems?.map((value, index) => (
                     <ListItem key={value.name}
                               onClick={() => moveToUrl(value.url)}

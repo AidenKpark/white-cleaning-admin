@@ -10,9 +10,9 @@ export type AccordionMenuPanelProps = {
 
 const AccordionMenuPanel = ({ AccordionMenuItemList, AccordionMenuTitle }: AccordionMenuPanelProps) => {
     return (
-        <Accordion>
+        <Accordion >
             <AccordionTitle {...AccordionMenuTitle} />
-            <AccordionMenu {...AccordionMenuItemList} />
+            {/*<AccordionMenu {...AccordionMenuItemList} />*/}
         </Accordion>
     );
 }

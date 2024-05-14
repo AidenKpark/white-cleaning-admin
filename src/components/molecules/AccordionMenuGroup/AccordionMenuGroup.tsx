@@ -51,7 +51,7 @@ const AccordionMenuGroup = () => {
     return (
         <>
             {
-                AccordionMenus.map((v, k) => <AccordionMenuPanel key={k} {...v} />)
+                AccordionMenus.map((v, k) => <AccordionMenuPanel sx={{margin:'0'}} key={k} {...v} />)
             }
         </>
     );

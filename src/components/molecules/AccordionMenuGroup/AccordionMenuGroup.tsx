@@ -51,10 +51,7 @@ const AccordionMenuGroup = () => {
     return (
         <>
             {
-                // 각 AccordionMenuPanel에 key prop을 추가
-                AccordionMenus.map(value => (
-                    <AccordionMenuPanel key={value.AccordionMenuTitle.AccordionTitle} {...value} />
-                ))
+                AccordionMenus.map((v, k) => <AccordionMenuPanel key={k} {...v} />)
             }
         </>
     );

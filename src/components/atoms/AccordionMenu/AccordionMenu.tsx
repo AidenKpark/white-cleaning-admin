@@ -7,6 +7,8 @@ import {
     ListItemText
 } from '@mui/material';
 import {useRouter} from "next/router";
+import SIZES from "@/styles/sizes";
+import COLORS from "@/styles/colors";
 
 
 export type AccordionMenuItem = {
@@ -27,10 +29,16 @@ const AccordionMenu = ({AccordionMenuItems}: AccordionMenuProps) => {
                 {AccordionMenuItems?.map((value, index) => (
                     <ListItem key={value.name}
                               onClick={() => moveToUrl(value.url)}
-                              sx={{borderBottom: 1, borderColor: 'divider'}}  // 테두리 추가
+                              sx={{
+                                  borderBottom: 1, borderColor: 'divider', transition: "all 0.3s",
+                                  '&:hover': {
+                                      backgroundColor: COLORS.BG.LIGHT,
+                                  }
+                              }}
                     >
                         <ListItemButton>
-                            <ListItemText primary={value.name}/>
+                            <ListItemText primaryTypographyProps={{fontSize: SIZES.FONT_SIZE.EXTRA_LARGE}}
+                                          primary={value.name}/>
                         </ListItemButton>
                     </ListItem>
                 ))}

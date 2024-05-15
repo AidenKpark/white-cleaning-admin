@@ -7,13 +7,12 @@ import BasicList from "@/components/molecules/BasicList/BasicList";
 import AppBarCustom from "@/components/molecules/AppBarCustom/AppBarCustom";
 import MainContent from "@/components/molecules/MainContent/MainContent";
 
-const drawerWidth = 240;
 
 const PermanentDrawerLeft = () => {
     return (
         <Box sx={mainLayoutStyle}>
             <AppBarCustom />
-            <StyledDrawer drawerWidth={drawerWidth} variant="permanent" anchor="left">
+            <StyledDrawer drawerWidth={300} variant="permanent" anchor="left">
                 <Divider />
                 <BasicList items={['Sign In', 'Home']} />
                 <Divider />

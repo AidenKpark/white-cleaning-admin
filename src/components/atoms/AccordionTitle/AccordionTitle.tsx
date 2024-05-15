@@ -4,6 +4,7 @@ import {
     Typography,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import COLORS from "@/styles/colors";
 
 
 export type AccordionTitleProps = {
@@ -16,7 +17,7 @@ const AccordionTitle = ({AccordionTitle}: AccordionTitleProps) => {
             expandIcon={<ExpandMoreIcon/>}
             aria-controls="Sales-content"
             id="Sales-header"
-            sx={{borderBottom:1,borderColor: '#dbdbdb'}}
+            sx={{borderBottom:1,borderColor: COLORS.BORDER.PRIMARY,}}
         >
             <Typography>{AccordionTitle}</Typography>
         </AccordionSummary>

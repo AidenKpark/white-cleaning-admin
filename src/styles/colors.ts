@@ -6,7 +6,7 @@ const COLORS = {
     THIRD: '#718096',         // 보조 색상 2 (기준색과 잘 어울리는 중간 회색)
     ACCENT: '#E53E3E',        // 강조 색상 (눈에 잘 띄는 빨간색)
     HIGHLIGHT: '#ECC94B',     // 하이라이트 색상 (눈에 띄는 밝은 노란색)
-
+    WHITE: '#FFFFFF',
     TEXT: {
         PRIMARY: '#FFFFFF',     // 기본 폰트 색상 (흰색, 어두운 배경과 대비)
         SECONDARY: '#A0AEC0',   // 보조 폰트 색상 (밝은 회색)

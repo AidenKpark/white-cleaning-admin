@@ -2,7 +2,7 @@ import * as React from 'react';
 import {AppProps} from 'next/app';
 import CssBaseline from "@mui/material/CssBaseline";
 import '../styles/global.css';
-import theme from "@/theme";
+import theme from "@/styles/theme";
 import {ThemeProvider} from "@mui/material";
 
 const MyApp = ({Component, pageProps}: AppProps) => {

@@ -5,20 +5,38 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import COLORS from "@/styles/colors";
+import SIZES from "@/styles/sizes";
+import {SvgIconComponent} from "@mui/icons-material";
+
 
 export type AccordionTitleProps = {
     AccordionTitle: string;
+    Icon: SvgIconComponent;
 }
 
-const AccordionTitle = ({AccordionTitle}: AccordionTitleProps) => {
+const AccordionTitle = ({AccordionTitle, Icon}: AccordionTitleProps) => {
     return (
         <AccordionSummary
-            expandIcon={<ExpandMoreIcon/>}
+            expandIcon={<ExpandMoreIcon style={{fontSize: SIZES.FONT_SIZE.EXTRA_EXTRA_LARGE, color: COLORS.TEXT.PRIMARY}}/>}
             aria-controls="Sales-content"
             id="Sales-header"
-            sx={{borderBottom:1,borderColor: '#dbdbdb'}}
+            sx={{
+                borderBottom: 1,
+                borderColor: COLORS.BORDER.PRIMARY,
+                padding: SIZES.SPACING.EXTRA_SMALL,
+                display: "flex",
+                alignItems: "center",
+                transition: "all 0.3s",
+                '&:hover': {
+                    backgroundColor: COLORS.BG.LIGHT,
+                },
+                //todo 확장되면 글씨 커지도록
+            }}
         >
-            <Typography>{AccordionTitle}</Typography>
+            <Icon style={{marginRight: SIZES.SPACING.SMALL, fontSize: SIZES.FONT_SIZE.EXTRA_EXTRA_LARGE}}/>
+            <Typography sx={{fontSize: SIZES.FONT_SIZE.EXTRA_LARGE}}>
+                {AccordionTitle}</Typography>
         </AccordionSummary>
     );
 }

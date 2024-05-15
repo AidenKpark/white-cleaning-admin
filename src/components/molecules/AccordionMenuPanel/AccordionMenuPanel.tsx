@@ -10,7 +10,7 @@ export type AccordionMenuPanelProps = {
 
 
 const AccordionMenuPanel = ({AccordionMenuItemList, AccordionMenuTitle}: AccordionMenuPanelProps) => {
-    const test = {
+    const expandedStyled = {
         '&.Mui-expanded': {
             margin: 0,
         },
@@ -18,7 +18,7 @@ const AccordionMenuPanel = ({AccordionMenuItemList, AccordionMenuTitle}: Accordi
 
     return (
         <Accordion
-            sx={test}
+            sx={expandedStyled}
         >
             <AccordionTitle {...AccordionMenuTitle} />
             <AccordionMenu {...AccordionMenuItemList} />

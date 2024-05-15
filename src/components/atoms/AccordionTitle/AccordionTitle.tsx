@@ -16,6 +16,7 @@ const AccordionTitle = ({AccordionTitle}: AccordionTitleProps) => {
             expandIcon={<ExpandMoreIcon/>}
             aria-controls="Sales-content"
             id="Sales-header"
+            sx={{borderBottom:1,borderColor: '#dbdbdb'}}
         >
             <Typography>{AccordionTitle}</Typography>
         </AccordionSummary>

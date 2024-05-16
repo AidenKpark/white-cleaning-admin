@@ -9,14 +9,13 @@ import MainContent from "@/components/molecules/MainContent/MainContent";
 import SIZES from "@/styles/sizes";
 import LogoLink from "@/components/atoms/LogoLink/LogoLink";
 
-
 const PermanentDrawerLeft = () => {
     return (
         <Box sx={mainLayoutStyle}>
             <AppBarCustom/>
             <StyledDrawer drawerWidth={SIZES.SIDEBAR_WIDTH.DEFAULT} variant="permanent" anchor="left">
                 <Divider/>
-                <LogoLink src={"logo.png"} />
+                <LogoLink src="logo.png" href="/" alt="Main Logo" />
                 {/*<BasicList items={['회원 등록하기', '메인 홈']}/>*/}
                 <Divider/>
                 <AccordionMenuGroup/>

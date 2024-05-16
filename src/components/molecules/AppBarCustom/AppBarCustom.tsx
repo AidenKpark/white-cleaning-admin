@@ -6,7 +6,7 @@ const AppBarCustom = () => (
     <AppBar position="fixed" sx={appBarStyle}>
         <Toolbar>
             <Typography variant="h6" noWrap component="div">
-                White Cleaning Admin
+                White Clinic 관리자
             </Typography>
         </Toolbar>
     </AppBar>

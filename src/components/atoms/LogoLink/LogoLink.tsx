@@ -4,9 +4,9 @@ import Box from '@mui/material/Box';
 import COLORS from "@/styles/colors";
 import SIZES from "@/styles/sizes";
 
-type LogoLinkProps = {
-    href: string;
+interface LogoLinkProps {
     src: string;
+    href: string;
     alt: string;
 }
 

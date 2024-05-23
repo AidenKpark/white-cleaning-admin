@@ -59,62 +59,14 @@ const CustomerEdit: React.FC = () => {
                     <Typography variant="h6" gutterBottom>
                         고객 정보 수정하기
                     </Typography>
-                    <Box
-                        component="form"
-                        sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
-                        onSubmit={handleSubmit}
-                    >
-                        <TextField
-                            label="고객 이름"
-                            name="name"
-                            variant="outlined"
-                            fullWidth
-                            value={formData.name}
-                            onChange={handleInputChange}
-                        />
-                        <TextField
-                            label="고객 주소"
-                            name="address"
-                            variant="outlined"
-                            fullWidth
-                            value={formData.address}
-                            onChange={handleInputChange}
-                        />
-                        <TextField
-                            label="요청한 물품 종류"
-                            name="itemType"
-                            variant="outlined"
-                            fullWidth
-                            value={formData.itemType}
-                            onChange={handleInputChange}
-                        />
-                        <TextField
-                            label="물품 갯수"
-                            name="itemCount"
-                            variant="outlined"
-                            fullWidth
-                            value={formData.itemCount}
-                            onChange={handleInputChange}
-                        />
-                        <TextField
-                            label="가능한 시간"
-                            name="availableTime"
-                            variant="outlined"
-                            fullWidth
-                            value={formData.availableTime}
-                            onChange={handleInputChange}
-                        />
-                        <TextField
-                            label="비고란"
-                            name="notes"
-                            variant="outlined"
-                            fullWidth
-                            value={formData.notes}
-                            onChange={handleInputChange}
-                        />
-                        <Button variant="contained" type="submit">
-                            수정하기
-                        </Button>
+                    <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }} onSubmit={handleSubmit}>
+                        <TextField label="고객 이름" name="name" variant="outlined" fullWidth value={formData.name} onChange={handleInputChange} />
+                        <TextField label="고객 주소" name="address" variant="outlined" fullWidth value={formData.address} onChange={handleInputChange} />
+                        <TextField label="요청한 물품 종류" name="itemType" variant="outlined" fullWidth value={formData.itemType} onChange={handleInputChange} />
+                        <TextField label="물품 갯수" name="itemCount" variant="outlined" fullWidth value={formData.itemCount} onChange={handleInputChange} />
+                        <TextField label="가능한 시간" name="availableTime" variant="outlined" fullWidth value={formData.availableTime} onChange={handleInputChange} />
+                        <TextField label="비고란" name="notes" variant="outlined" fullWidth value={formData.notes} onChange={handleInputChange} />
+                        <Button variant="contained" type="submit">수정하기</Button>
                     </Box>
                 </Paper>
                 <Paper sx={{ p: 3 }}>

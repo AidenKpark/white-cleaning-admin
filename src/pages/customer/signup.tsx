@@ -14,8 +14,15 @@ const CustomerSignUp: React.FC = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        const errors = [];
+        if (!name) errors.push('고객 이름');
+        if (!address) errors.push('고객 주소');
+        if (!itemType) errors.push('물품 목록');
+        if (!itemCount) errors.push('물품 갯수');
+        if (!availableTime) errors.push('수리 가능 시간');
+
         if (!name || !address || !itemType || !itemCount || !availableTime) {
-            alert("모든 필수 항목을 채워주세요.");
+            alert(`다음 필드를 채워주세요: ${errors.join(', ')}`);
             return;
         }
 

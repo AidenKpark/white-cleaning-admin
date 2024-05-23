@@ -15,7 +15,7 @@ interface CommonLayoutProps {
 
 const CommonLayout: React.FC<CommonLayoutProps> = ({ children }) => {
     const menuItems = [
-        { label: 'Sign Out', href: '/' }, // 'signout' 경로는 예시이며 실제 경로에 맞게 수정하세요.
+        { label: 'Sign Out', href: '/' },
         { label: 'Home', href: '/home' }
     ];
 

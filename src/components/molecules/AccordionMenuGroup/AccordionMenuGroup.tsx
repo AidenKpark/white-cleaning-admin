@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ACCORDION_MENUS} from "@/constants/menuTexts";
+import {ACCORDION_MENUS} from "@/constants/ACCORDION_MENUS";
 import AccordionMenuPanel from "@/components/molecules/AccordionMenuPanel/AccordionMenuPanel";
 
 const AccordionMenuGroup = () => {

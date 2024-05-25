@@ -1,23 +1,9 @@
 // pages/home.tsx
 import React from 'react';
-import {
-    Box,
-    Typography,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Paper,
-    Divider
-} from '@mui/material';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import {Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography} from '@mui/material';
+import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import AppBarCustom from "@/components/molecules/AppBarCustom/AppBarCustom";
-import LogoLink from "@/components/atoms/LogoLink/LogoLink";
-import BasicList from "@/components/molecules/BasicList/BasicList";
-import AccordionMenuGroup from "@/components/molecules/AccordionMenuGroup/AccordionMenuGroup";
-import { StyledDrawer } from "@/styles/DrawerStyles";
+import Sidebar from "@/components/organisms/Sidebar";
 
 const salesData = [
     {name: '00:00', sales: 400},
@@ -40,21 +26,11 @@ const orders = [
 ];
 
 export default function HomePage() {
-    const menuItems = [
-        { label: 'Sign Out', href: '/' },
-        { label: 'Home', href: '/home' }
-    ];
 
     return (
         <Box sx={{ display: 'flex' }}>
             <AppBarCustom />
-            <StyledDrawer drawerWidth={300} variant="permanent" anchor="left">
-                <LogoLink src="/logo.png" href="/" alt="Main Logo" />
-                <Divider />
-                <BasicList items={menuItems} />
-                <Divider />
-                <AccordionMenuGroup />
-            </StyledDrawer>
+            <Sidebar/>
             <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
                 <Typography variant="h4" gutterBottom component="div">
                     Today

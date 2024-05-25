@@ -9,39 +9,39 @@ export const ACCORDION_MENUS: AccordionMenuPanelProps[] = [
         AccordionMenuTitle: {AccordionTitle: '기사님 관리', Icon: LocalShippingIcon  },
         AccordionMenuItemList: {
             AccordionMenuItems: [
-                {name: '수정하기', url: 'courier/edit'},
                 {name: '리스트 보기', url: 'courier/list'},
                 {name: '등록하기', url: 'courier/signup'},
+                {name: '수정하기', url: 'courier/edit'},
             ]
         }
     },
     {
-        AccordionMenuTitle: {AccordionTitle: '고객님 관리', Icon: PeopleIcon},
+        AccordionMenuTitle: {AccordionTitle: '회원 관리', Icon: PeopleIcon},
         AccordionMenuItemList: {
             AccordionMenuItems: [
-                {name: '수정하기', url: 'customer/edit'},
                 {name: '리스트 보기', url: 'customer/list'},
                 {name: '등록하기', url: 'customer/signup'},
+                {name: '수정하기', url: 'customer/edit'},
             ]
         }
     },
     {
-        AccordionMenuTitle: {AccordionTitle: '스케쥴 관리', Icon: EventIcon},
+        AccordionMenuTitle: {AccordionTitle: '스케쥴', Icon: EventIcon},
         AccordionMenuItemList: {
             AccordionMenuItems: [
-                {name: '수정하기', url: 'schedule/edit'},
                 {name: '리스트 보기', url: 'schedule/list'},
                 {name: '추가하기', url: 'schedule/add'},
+                {name: '수정하기', url: 'schedule/edit'},
             ]
         }
     },
     {
-        AccordionMenuTitle: {AccordionTitle: '판매 매출표', Icon: TrendingUpIcon},
+        AccordionMenuTitle: {AccordionTitle: '영업 매출', Icon: TrendingUpIcon},
         AccordionMenuItemList: {
             AccordionMenuItems: [
-                {name: '일일 매출표', url: '/'},
-                {name: '주간 매출표', url: '/'},
-                {name: '월간 매출표', url: '/'},
+                {name: '일자별 매출', url: '/'},
+                {name: '주간 매출', url: '/'},
+                {name: '월별 매출', url: '/'},
             ]
         }
     }

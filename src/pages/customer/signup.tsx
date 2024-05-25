@@ -1,6 +1,6 @@
 // pages/customer/signup.tsx
-import React, { useState } from 'react';
-import { Box, TextField, Button, Typography, Paper } from '@mui/material';
+import React, {useState} from 'react';
+import {Box, Button, Paper, TextField, Typography} from '@mui/material';
 import CommonLayout from "@/components/layout/CommonLayout";
 
 const CustomerSignUp: React.FC = () => {

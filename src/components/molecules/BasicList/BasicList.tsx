@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import {List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import Link from 'next/link';
 
 // 항목 타입 정의

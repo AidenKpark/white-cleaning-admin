@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Box, Toolbar, Typography, TextField, Button, IconButton, InputAdornment } from '@mui/material';
-import { mainContentStyle } from "@/styles/MainLayoutStyles";
+import {Box, Button, IconButton, InputAdornment, TextField} from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-const MainContent = () => {
+const Login = () => {
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [showPassword, setShowPassword] = React.useState(false);
@@ -21,7 +20,9 @@ const MainContent = () => {
 
     return (
         <Box component="main" sx={{
-            ...mainContentStyle,
+            flexGrow: 1,
+            bgcolor: 'background.default',
+            p: 3,
             display: 'flex',       // Flexbox 사용
             flexDirection: 'column', // 수직 방향 정렬
             alignItems: 'center',  // 수평 중앙 정렬
@@ -74,5 +75,5 @@ const MainContent = () => {
     );
 };
 
-export default MainContent;
+export default Login;
 

@@ -1,7 +1,18 @@
 import * as React from 'react';
 import {
-    Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,
-    Collapse, Typography, IconButton, TablePagination, TableFooter
+    Box,
+    Collapse,
+    IconButton,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableFooter,
+    TableHead,
+    TablePagination,
+    TableRow,
+    Typography
 } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';

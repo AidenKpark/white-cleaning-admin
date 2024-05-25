@@ -1,6 +1,18 @@
 // pages/customer/list.tsx
-import React, { useEffect, useState } from 'react';
-import { Box, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, TextField } from '@mui/material';
+import React, {useEffect, useState} from 'react';
+import {
+    Box,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TablePagination,
+    TableRow,
+    TextField,
+    Typography
+} from '@mui/material';
 import CommonLayout from "@/components/layout/CommonLayout";
 
 interface Customer {

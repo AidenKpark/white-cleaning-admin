@@ -1,8 +1,5 @@
 import * as React from 'react';
-import {
-    AccordionSummary,
-    Typography,
-} from '@mui/material';
+import {AccordionSummary, Typography,} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import COLORS from "@/styles/colors";
@@ -24,7 +21,6 @@ const AccordionTitle = ({AccordionTitle, Icon}: AccordionTitleProps) => {
             sx={{
                 borderBottom: 1,
                 borderColor: COLORS.BORDER.PRIMARY,
-                // padding: SIZES.SPACING.EXTRA_SMALL,
                 display: "flex",
                 alignItems: "center",
                 transition: "all 0.3s",

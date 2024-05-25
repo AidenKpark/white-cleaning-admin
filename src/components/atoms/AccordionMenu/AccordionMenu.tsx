@@ -1,11 +1,5 @@
 import * as React from 'react';
-import {
-    AccordionDetails,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemText
-} from '@mui/material';
+import {AccordionDetails, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import {useRouter} from "next/router";
 import SIZES from "@/styles/sizes";
 import COLORS from "@/styles/colors";

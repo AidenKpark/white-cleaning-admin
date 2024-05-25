@@ -1,26 +1,17 @@
 import * as React from 'react';
-import {Box, Divider} from '@mui/material';
-import {StyledDrawer} from "@/styles/DrawerStyles";
-import {mainLayoutStyle} from "@/styles/MainLayoutStyles";
-import AccordionMenuGroup from "@/components/molecules/AccordionMenuGroup/AccordionMenuGroup";
-import BasicList from "@/components/molecules/BasicList/BasicList";
+import {Box} from '@mui/material';
 import AppBarCustom from "@/components/molecules/AppBarCustom/AppBarCustom";
-import MainContent from "@/components/molecules/MainContent/MainContent";
-import SIZES from "@/styles/sizes";
-import LogoLink from "@/components/atoms/LogoLink/LogoLink";
+import Login from "@/components/molecules/Login/Login";
+import Sidebar from "@/components/organisms/Sidebar";
 
-const PermanentDrawerLeft = () => {
+const Index = () => {
     return (
-        <Box sx={mainLayoutStyle}>
+        <Box sx={{display:'flex'}}>
             <AppBarCustom/>
-            <StyledDrawer drawerWidth={SIZES.SIDEBAR_WIDTH.DEFAULT} variant="permanent" anchor="left">
-                <LogoLink src="logo.png" href="/" alt="Main Logo" />
-                {/*<BasicList items={['회원 등록하기', '메인 홈']}/>*/}
-                <AccordionMenuGroup/>
-            </StyledDrawer>
-            <MainContent/>
+            <Sidebar />
+            <Login/>
         </Box>
     );
 }
 
-export default PermanentDrawerLeft;
+export default Index;

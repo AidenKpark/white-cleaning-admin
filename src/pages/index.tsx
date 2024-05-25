@@ -14,10 +14,8 @@ const PermanentDrawerLeft = () => {
         <Box sx={mainLayoutStyle}>
             <AppBarCustom/>
             <StyledDrawer drawerWidth={SIZES.SIDEBAR_WIDTH.DEFAULT} variant="permanent" anchor="left">
-                <Divider/>
                 <LogoLink src="logo.png" href="/" alt="Main Logo" />
                 {/*<BasicList items={['회원 등록하기', '메인 홈']}/>*/}
-                <Divider/>
                 <AccordionMenuGroup/>
             </StyledDrawer>
             <MainContent/>

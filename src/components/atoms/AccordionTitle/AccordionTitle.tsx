@@ -24,7 +24,7 @@ const AccordionTitle = ({AccordionTitle, Icon}: AccordionTitleProps) => {
             sx={{
                 borderBottom: 1,
                 borderColor: COLORS.BORDER.PRIMARY,
-                padding: SIZES.SPACING.EXTRA_SMALL,
+                // padding: SIZES.SPACING.EXTRA_SMALL,
                 display: "flex",
                 alignItems: "center",
                 transition: "all 0.3s",

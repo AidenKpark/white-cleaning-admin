@@ -38,6 +38,9 @@ const SIZES = {
     },
     SIDEBAR_WIDTH: {
         DEFAULT: 300 // 18.75px (300px)
+    },
+    SCROLL_WIDTH:{
+        DEFAULT: `8px`
     }
 };
 

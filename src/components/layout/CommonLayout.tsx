@@ -5,21 +5,27 @@ import { StyledDrawer } from "@/styles/DrawerStyles";
 import BasicList from "@/components/molecules/BasicList/BasicList";
 import AccordionMenuGroup from "@/components/molecules/AccordionMenuGroup/AccordionMenuGroup";
 import { mainLayoutStyle } from "@/styles/MainLayoutStyles";
+import LogoLink from "@/components/atoms/LogoLink/LogoLink";
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
-// CommonLayoutProps 인터페이스를 통해 children의 타입을 React.ReactNode로 지정합니다.
 interface CommonLayoutProps {
     children: React.ReactNode;
 }
 
 const CommonLayout: React.FC<CommonLayoutProps> = ({ children }) => {
+    const menuItems = [
+        { label: 'Sign Out', href: '/' },
+        { label: 'Home', href: '/home' }
+    ];
+
     return (
         <Box sx={mainLayoutStyle}>
             <AppBarCustom />
             <StyledDrawer drawerWidth={drawerWidth} variant="permanent" anchor="left">
+                <LogoLink src="/logo.png" href="/" alt="Main Logo" />
                 <Divider />
-                <BasicList items={['Sign Out', 'Home']} />
+                <BasicList items={menuItems} />
                 <Divider />
                 <AccordionMenuGroup />
             </StyledDrawer>

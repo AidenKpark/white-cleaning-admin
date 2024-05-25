@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {Box} from '@mui/material';
-import AppBarCustom from "@/components/molecules/AppBarCustom/AppBarCustom";
+import DashboardAppBar from "@/components/molecules/DashboardAppBar/DashboardAppBar";
 import Login from "@/components/molecules/Login/Login";
 import Sidebar from "@/components/organisms/Sidebar";
 
 const Index = () => {
     return (
         <Box sx={{display:'flex'}}>
-            <AppBarCustom/>
+            <DashboardAppBar/>
             <Sidebar />
             <Login/>
         </Box>

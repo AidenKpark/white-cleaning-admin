@@ -25,7 +25,7 @@ const AccordionTitle = ({AccordionTitle, Icon}: AccordionTitleProps) => {
                 alignItems: "center",
                 transition: "all 0.3s",
                 '&:hover': {
-                    backgroundColor: COLORS.BG.LIGHT,
+                    backgroundColor: COLORS.SECONDARY,
                 },
                 //todo 확장되면 글씨 커지도록
             }}

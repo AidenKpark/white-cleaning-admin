@@ -2,7 +2,7 @@
 import React from 'react';
 import {Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography} from '@mui/material';
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
-import AppBarCustom from "@/components/molecules/AppBarCustom/AppBarCustom";
+import DashboardAppBar from "@/components/molecules/DashboardAppBar/DashboardAppBar";
 import Sidebar from "@/components/organisms/Sidebar";
 
 const salesData = [
@@ -29,7 +29,7 @@ export default function HomePage() {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBarCustom />
+            <DashboardAppBar />
             <Sidebar/>
             <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
                 <Typography variant="h4" gutterBottom component="div">

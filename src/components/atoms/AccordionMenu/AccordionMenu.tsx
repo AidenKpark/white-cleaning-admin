@@ -26,7 +26,7 @@ const AccordionMenu = ({AccordionMenuItems}: AccordionMenuProps) => {
                               sx={{
                                   borderBottom: 1, borderColor: 'divider', transition: "all 0.3s",
                                   '&:hover': {
-                                      backgroundColor: COLORS.BG.LIGHT,
+                                      backgroundColor: COLORS.SECONDARY,
                                   }
                               }}
                     >

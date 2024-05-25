@@ -19,7 +19,7 @@ const MenuDrawer: React.FC<DrawerProps> = (props) => {
                 '& .MuiDrawer-paper': {
                     width: 300,
                     boxSizing: 'border-box',
-                    backgroundColor: COLORS.BG.DEFAULT,
+                    backgroundColor: COLORS.PRIMARY,
                     color: COLORS.TEXT.PRIMARY,
                     '&::-webkit-scrollbar': {
                         width: SIZES.SCROLL_WIDTH.DEFAULT,

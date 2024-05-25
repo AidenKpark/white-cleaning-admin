@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Box} from '@mui/material';
-import AppBarCustom from "@/components/molecules/AppBarCustom/AppBarCustom";
+import DashboardAppBar from "@/components/molecules/DashboardAppBar/DashboardAppBar";
 import Sidebar from "@/components/organisms/Sidebar";
 
 
@@ -10,10 +10,10 @@ type CommonLayoutProps = {
 
 const CommonLayout: React.FC<CommonLayoutProps> = ({ children }) => {
     return (
-        <Box sx={{display:'flex'}}>
-            <AppBarCustom />
+        <Box sx={{display:'flex', height: '100vh'}}>
+            <DashboardAppBar />
             <Sidebar/>
-            <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
+            <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 ,mt: '64px' }}>
                 {children}
             </Box>
         </Box>

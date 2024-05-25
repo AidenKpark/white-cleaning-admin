@@ -12,11 +12,11 @@ export type AccordionMenuPanelProps = {
 
 const AccordionMenuPanel = ({AccordionMenuItemList, AccordionMenuTitle}: AccordionMenuPanelProps) => {
     const expandedStyled = {
-        backgroundColor: COLORS.BG.DEFAULT,
+        backgroundColor: COLORS.PRIMARY,
         color: COLORS.TEXT.PRIMARY,
         '&.Mui-expanded': {
             margin: 0,
-            backgroundColor:COLORS.BG.DEFAULT
+            backgroundColor:COLORS.PRIMARY
         },
     }
 
